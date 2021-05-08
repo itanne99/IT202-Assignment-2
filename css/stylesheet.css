@@ -1,0 +1,61 @@
+body {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/forest-background.jpg");
+
+
+    /* Set a specific height */
+    height: 50%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/*.semi-transparent-jumbotron-bg:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.vox-cdn.com/thumbor/SiIyeqmKIJGcOJccz94pHgwmgvQ=/0x0:1400x1400/1200x800/filters:focal(588x588:812x812):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/68837730/poptart1redrainbowfix_1.0.gif");
+
+
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}*/
+
+.semi-transparent-jumbotron-bg{
+    background-color: rgba(227, 227, 227, 0.5);
+}
+
+.required {
+    color:red;
+}
+
+.btn-success{
+    background-color: #228b22;
+    border-color: #228b22;
+}
+
+.btn-success:hover{
+    background-color: #0a602c;
+    border-color: #0a602c;
+}
+
+.btn-warning{
+    background-color: #ff8c00;
+    border-color: #ff8c00;
+}
+
+.btn-warning:hover{
+    background-color: #c66b00;
+    border-color: #c66b00;
+}
+
+.not-visible{
+    display: none;
+}
+
+.invalid-tooltip{
+    top: unset;
+}

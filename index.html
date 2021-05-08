@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>PPP Login Portal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    <div id="alerts" class="container fixed-bottom">
+        <div id="logInSuccess" class="alert alert-success" role="alert" style="display: none;">
+            <!-- Simple welcome message consisting of the Photographer’s name and the Transaction chosen from the dropdown menu -->
+            <span id="logInSuccessMsg">Success! You're logged in!!</span>
+            <button type="button" class="close" aria-label="Close" onclick="$('#logInSuccess').fadeOut()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div id="regExFail" class="alert alert-danger" role="alert" style="display: none;">
+            Please check your form inputs above.
+            <button type="button" class="close" aria-label="Close" onclick="$('#regExFail').fadeOut()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div id="userNotFound" class="alert alert-danger" role="alert" style="display: none;">
+            Hmm... That user was not found. Is the information correct?
+            <button type="button" class="close" aria-label="Close" onclick="$('#userNotFound').fadeOut()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+        <div class="jumbotron semi-transparent-jumbotron-bg col-12 col-md-8 row">
+            <div class="col-12" id="formHeader">
+                <h1 class="text-center">Picture Perfect Portraits Login Portal</h1>
+            </div>
+            <form id="loginForm" class="col-12 row needs-validation" novalidate> <!-- valid-feedback - Gives user a positive msg invalid-feedback - Gives user a negative message -->
+                <!-- First Name Input -->
+                <div class="form-group col-12 col-md-6">
+                    <label for="firstNameInput">First Name<span class="required">*</span>:</label>
+                    <input type="text" class="form-control" id="firstNameInput" aria-describedby="firstNameInput" placeholder="First name" required>
+                    <div class="invalid-tooltip">Please make sure to start with a capital letter and to not have any numbers.</div>
+                </div>
+                <!-- Last Name Input -->
+                <div class="form-group col-12 col-md-6">
+                    <label for="lastNameInput">Last Name<span class="required">*</span>:</label>
+                    <input type="text" class="form-control" id="lastNameInput" aria-describedby="lastNameInput" placeholder="Last name" required>
+                    <div class="invalid-tooltip">Please make sure to start with a capital letter and to not have any numbers.</div>
+                </div>
+                <!-- User ID Input-->
+                <div class="form-group col-12 col-md-6">
+                    <label for="userIDInput">User ID #<span class="required">*</span>:</label>
+                    <input type="text" class="form-control" id="userIDInput" aria-describedby="userIDInput" placeholder="User ID" required>
+                    <div class="invalid-tooltip">Please make sure to only have 8 digits.</div>
+                </div>
+                <!-- Password Input -->
+                <div class="form-group col-12 col-md-6">
+                    <label for="passwordInput">Password<span class="required">*</span>:</label>
+                    <input type="password" class="form-control" id="passwordInput" aria-describedby="passwordInput" placeholder="Password" required>
+                    <div class="invalid-tooltip">Password must contain a maximum of ten characters, at least one uppercase letter, one special character, and one number.</div>
+                </div>
+                <!-- Phone Number Input -->
+                <div class="form-group col-12 col-md-6">
+                    <label for="phoneInput">Phone Number<span class="required">*</span>:</label>
+                    <input type="tel" class="form-control" id="phoneInput" aria-describedby="phoneInput" placeholder="Phone Number" required>
+                    <div class="invalid-tooltip">Please follow the example. 123-456-7890</div>
+                </div>
+                <!-- Email Input -->
+                <div class="form-group col-12 col-md-6">
+                    <label for="emailInput">Email address:</label>
+                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailInput" placeholder="Enter email">
+                    <small id="email" class="form-text text-white">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="emailConfirmationCheck">
+                        <label class="form-check-label" for="emailConfirmationCheck">Check the box to request an Email Confirmation</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="transactionSelect">Select a Transaction:</label>
+                    <select class="custom-select" id="transactionSelect">
+                        <option>Search A Photographer's Accounts</option>
+                        <option>Book A Client's Appointment</option>
+                        <option>Place A Client's Order</option>
+                        <option>Cancel A Client's Appointment</option>
+                        <option>Cancel A Client's Order</option>
+                        <option>Create A New Client Account</option>
+                    </select>
+                </div>
+                <div class="form-group col-6 ml-auto align-self-end"> <!-- Content hug bottom right-->
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="reset" class="btn btn-warning">Restart</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/formReader.js"></script>
+</body>
+</html>
